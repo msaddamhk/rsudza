@@ -1,0 +1,166 @@
+/* search */
+.form-control-borderless {
+  border: none;
+  border-radius: 5px;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  border-radius: 5px;
+}
+/* hero */
+.jumbotron {
+  height: 630px;
+}
+/* .jmb1 {
+  background-image: url(../foto/ft3.jpg);
+  background-size: cover;
+  height: 630px;
+  position: relative; 
+}
+.jmb1::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to left, rgba(255, 255, 255, 0.3),#ffffff );
+  position: absolute;
+  bottom: 0;
+}
+
+.containergb {
+  position: relative;
+  z-index: 100;
+} */
+
+/* baru */
+.jmb2 {
+  background-image: url(../foto/rsudza.jpeg);
+  background-size: cover;
+  height: 530px;
+  position: relative; 
+}
+.jmb2::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #010202, rgba(0, 0, 0, 0.3));
+  position: absolute;
+  bottom: 0;
+}
+.containergb2 {
+  position: relative;
+  z-index: 100;
+}
+/* Produk */
+.jmb3 {
+  background-image: url(../foto/rsudza.jpeg);
+  background-size: cover;
+  height: 390px;
+  position: relative; 
+}
+.jmb3::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #010202, rgba(0, 0, 0, 0.3));
+  /* background-image: linear-gradient(to top, rgba(19, 19, 19, 0.3),#070707 ); */
+  position: absolute;
+  bottom: 0;
+}
+.containergb2 {
+  position: relative;
+  z-index: 100;
+}
+.info1 {
+  box-shadow: 0 3px 20px rgb(39, 80, 98, 0.5);
+  background-color: white;
+  border-radius: 12px;
+  margin-top: -100px;
+  padding: 30px;
+}
+.info1 img {
+  width: 150px;
+  height: 155px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.info1 a {
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 5px;
+  color: black;
+}
+.info1 p {
+  font-size: 14px;
+  color: #acacac;
+  margin-top: -100;
+  font-weight: 250;
+}
+
+/* kategori */
+.product {
+  height: 100px;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  background-size: cover ;
+}
+.product:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 100%;
+    background-image: linear-gradient(to top, #303030, rgba(0, 0, 0, 0.3));
+}
+.product-content {
+  position: absolute;
+  padding: 10px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+}
+.komponen-produk {
+    margin-bottom: 20px;
+  }
+  .foto-produk {
+    width: 100%;
+    height: 150px;
+    border-radius:1px;
+    background-size: cover;
+  }
+  .text-produk {
+    font-size: 18px;
+    margin-top: 12px;
+    color: black;
+
+  }
+  .komponen-produk:hover {
+    text-decoration: none;
+  }
+  .melayang:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);   
+}
+.text-produk:hover{
+  padding: 10px;
+  transition: all 0.4s ease-in-out
+}
+.card2 {
+    height: 325px;
+    width: 230px;
+    position: relative;
+    overflow: hidden;
+}
+.barang {
+    text-decoration: none;
+    color: #000000;
+}

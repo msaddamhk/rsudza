@@ -1,0 +1,16 @@
+.animasi-teks {
+    font-size: 29px;
+    width: 100%;
+    white-space:nowrap;
+    overflow:hidden;
+    -webkit-animation: typing 5s steps(70, end);
+    animation: animasi-ketik 5s steps(70, end);
+  }
+  
+  @keyframes animasi-ketik{
+    from { width: 0; }
+  }
+  
+  @-webkit-keyframes animasi-ketik{
+    from { width: 0; }
+  }

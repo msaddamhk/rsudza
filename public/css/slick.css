@@ -1,0 +1,10 @@
+.slick-prev:before {
+    color: #275062 !important;
+    /* background-color: #eee; */
+    font-size: 30px;
+    }
+    .slick-next:before {
+    color: #275062 !important;
+    /* background-color: #eee; */
+    font-size: 30px;
+    }
