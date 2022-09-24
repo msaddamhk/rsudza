@@ -138,7 +138,7 @@
                             <span class="input-group-btn">
                                 <div class="col-auto">
                                     <button class="btn btn-lg text-white" style="background-color: #e90000;"
-                                        type="submit">Search</button>
+                                        type="submit">Cari</button>
                                 </div>
                             </span>
                         </div>
@@ -170,7 +170,7 @@
                 @endforeach
             </div>
             <div class=" mt-2">
-                <a href="/detailkategori" class="btn my-2 my-sm-0melayang " type="submit"
+                <a href="/detailkategori" class="btn my-2 my-sm-0 melayang " type="submit"
                     style="background-color: #f72601; color: rgb(255, 255, 255);">Selanjutnya</a>
             </div>
         </div>
@@ -184,7 +184,7 @@
             <hr>
             <div class="row mt-4">
                 @foreach ($bar as $barang)
-                    <div class="col-6 col-md-4 col-lg-3 mb-4">
+                    <div class="col-6 col-md-4 col-lg-3 mb-2">
                         <div class=" border  mb-3 melayang">
                             <a href="/detail/{{ $barang->id }}" style="   text-decoration: none;">
                                 <div class="produk">
@@ -202,7 +202,7 @@
                 @endforeach
             </div>
             <div class="">
-                <a href="/produk" class="btn my-2 my-sm-0 mt-5 melayang " type="submit"
+                <a href="/produk" class="btn my-2 my-sm-0 melayang " type="submit"
                     style="background-color: #f72601; color: rgb(255, 255, 255);">Selanjutnya</a>
             </div>
     </section>

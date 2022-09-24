@@ -34,7 +34,7 @@
 
             <div class="form-group mt-3">
                 <label for="berat">Harga Produksi</label>
-                <input type="number" name="berat" class="form-control" id="berat"
+                <input value="{{ $barangs->berat }}" type="number" name="berat" class="form-control" id="berat"
                     placeholder="Masukkan harga produksi" required>
             </div>
 

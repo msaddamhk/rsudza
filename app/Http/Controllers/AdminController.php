@@ -112,7 +112,7 @@ class AdminController extends Controller
             FacadesFile::delete('public/produk', $barangs->name);
             $resorce = $request->file('gambar');
             $name = time() . $resorce->getClientOriginalName();
-            $resorce->storeAs('public/public/produk', $name);
+            $resorce->storeAs('public/produk', $name);
         }
         $barangs->update([
             'kategori_id' => $request->kategori_id,
