@@ -20,13 +20,13 @@ class PesananController extends Controller
 {
     public function index()
     {
-        $keranjang = keranjang::where('id_user', auth()->user()->id)->get();
+        $keranjang = Keranjang::where('id_user', auth()->user()->id)->get();
         return view('pesanan', compact('keranjang'));
     }
     public function pesanan(Request $request)
     {
         $code = 'Kantin-RSUDZA-' . mt_rand(0000, 9999);
-        $keranjang = keranjang::where('id_user', auth()->user()->id)->get();
+        $keranjang = Keranjang::where('id_user', auth()->user()->id)->get();
         $pesanan = Pesanan::create([
             'user_id' => auth()->user()->id,
             "nama_penerima" => $request->nama,
@@ -118,7 +118,6 @@ class PesananController extends Controller
     public function pesanandetail()
     {
         $datatransaksi = Pesanan::where('user_id', auth()->id())->latest()->get();
-        // return view('invoice', compact('datatransaksi'));
         $title = "Pesanan";
         return view('invoice', compact('datatransaksi', 'title'));
     }
