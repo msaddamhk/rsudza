@@ -7,7 +7,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PesanController;
 use App\Http\Controllers\KelolaController;
-use App\Http\Controllers\PesananController;
+use App\Http\Controllers\pesananController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\kelolakeuntungancontroller;
 use App\Http\Controllers\RegisterController;
