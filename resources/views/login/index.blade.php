@@ -159,10 +159,10 @@
         </div>
 
         <div
-            class="kanan bg-primary w-50 h-100 d-none d-sm-block d-md-none d-lg-block"style="background-image: url(foto/rsudza1.jpg);background-size: cover;">
-            <div class="row justify-content-center">
+            class="kanan  w-50 h-100 d-none d-sm-block d-md-none d-lg-block"style="background-image: url(foto/rsudza1.jpg);background-size: cover;">
+            {{-- <div class="row justify-content-center">
                 <div class="col-6"></div>
-            </div>
+            </div> --}}
         </div>
 
     </section>
