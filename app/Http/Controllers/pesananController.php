@@ -41,7 +41,8 @@ class PesananController extends Controller
             "kodepesanan" => $code,
             "konfirmasi" => 'BELUM DI KONFIRMASI',
             "totalkeuntungan" => $request->keuntungan,
-            "pilihan" => $request->pilihan
+            "pilihan" => $request->pilihan,
+            "pecahan" => $request->pecahan
 
         ]);
         $databarang = [];

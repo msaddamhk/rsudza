@@ -96,13 +96,33 @@
                                     </label>
                                 </div>
                             </div>
+
                             <div class="form-group mt-3" id="x" style="display: none">
                                 <label for="">Pilih</label>
-                                <select class="form-control form-control-md" name="pilihan" id="pilihan">
-                                    <option>Uang Pas</option>
-                                    <option>Butuh Uang kembalian</option>
+
+                                <select id="test" class="form-control" name="pilihan"
+                                    onchange="showDiv('hidden_div', this)">
+                                    <option value="0 , Uang Pas" selected>Uang Pas</option>
+                                    <option value="1, Butuh Uang Kembalian">Butuh Uang kembalian</option>
                                 </select>
+
+                                <div class="form-group mt-3" id="hidden_div">
+                                    <label for="deskripsi">Masukan pecahan</label>
+                                    <input type="text" name="pecahanq" class="form-control" id="deskripsi"
+                                        aria-describedby="emailHelp">
+                                </div>
                             </div>
+                            <style>
+                                #hidden_div {
+                                    display: none;
+                                }
+                            </style>
+                            <script>
+                                function showDiv(divId, element) {
+                                    document.getElementById(divId).style.display = element.value == "1, Butuh Uang Kembalian" ? 'block' : 'none';
+                                }
+                            </script>
+
                             <hr class="mt-4" />
                             <p style="color: #000000">
                                 Total Harga Barang : Rp. {{ number_format($totalharga) }} + Rp. 5000 Ongkos Kirim
