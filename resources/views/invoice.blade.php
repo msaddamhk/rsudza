@@ -73,9 +73,12 @@
                 </div>
 
                 <div class="row p-3">
-                    <a class="btn text-white" style="background-color: #e90000;"
+                    <a class="btn btn-success" style=""
                         href=" https://api.whatsapp.com/send?phone=6285760557702&text=Hai Admin Saya Ingin Menanyakan Informasi barang saya, dengan kode Pesanan {{ $item->kodepesanan }}, atas nama {{ $item->nama_penerima }} ">Hubungi
                         Admin
+                    </a>
+                    <a class="btn btn-primary text-white ml-2" style="" href="{{ route('downloadpdf', $item->id) }}">
+                        Download
                     </a>
                     </form>
                 </div>

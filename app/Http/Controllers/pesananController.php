@@ -12,9 +12,12 @@ use App\Models\Keranjang;
 use Midtrans\Notification;
 use App\Models\Pesanan;
 use App\Models\PesananItems;
+use Barryvdh\DomPDF\PDF;
+use Dompdf\Dompdf;
 use Egulias\EmailValidator\Warning\Warning;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+
 
 class PesananController extends Controller
 {
@@ -22,6 +25,19 @@ class PesananController extends Controller
     {
         $keranjang = Keranjang::where('id_user', auth()->user()->id)->get();
         return view('pesanan', compact('keranjang'));
+    }
+    public function pdf($id)
+    {
+        $data = Pesanan::where('id', $id)->first();
+        $pdf = new Dompdf();
+        $pdf->loadHtml(view('pdf2', ['data' => $data]));
+        $pdf->setpaper('A4' . 'portrait');
+        $pdf->render();
+        $pdf->stream();
+
+
+        // return $data;
+        // return $pdf->download('itsolutionstuff.pdf');
     }
     public function pesanan(Request $request)
     {

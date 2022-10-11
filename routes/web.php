@@ -68,3 +68,5 @@ Route::get('/user', function () {
         'title' => 'User'
     ]);
 })->middleware('auth');
+
+Route::get('/downloadpdf/{id}', [pesananController::class, 'pdf'])->name('downloadpdf');
