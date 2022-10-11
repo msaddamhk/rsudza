@@ -108,7 +108,7 @@
 
                                 <div class="form-group mt-3" id="hidden_div">
                                     <label for="deskripsi">Masukan pecahan</label>
-                                    <input type="text" name="pecahanq" class="form-control" id="deskripsi"
+                                    <input type="text" name="pecahan" class="form-control" id="deskripsi"
                                         aria-describedby="emailHelp">
                                 </div>
                             </div>
