@@ -145,8 +145,7 @@
                     <h2 class="heading">No Pesanan: {{ $data->kodepesanan }}</h2>
                     <p class="sub-heading">Nama : {{ $data->nama_penerima }}</p>
                     <p class="sub-heading">Tanggal Pesanan : {{ $data->created_at }}</p>
-
-
+                    <p class="sub-heading">Opsi Pembayaran : {{ $data->pembayaran }}</p>
                 </div>
                 {{-- <div class="col-6">
                     <p class="sub-heading">Full Name: </p>
@@ -165,10 +164,8 @@
                     <tr>
                         <th>Nama Produk</th>
                         <th class="w-20">Jumlah</th>
-                        <th class="w-20">Harga Brang</th>
+                        <th class="w-20">Harga Barang</th>
                         <th class="w-20">Total Harga</th>
-
-
                     </tr>
                 </thead>
                 <tbody>
@@ -176,22 +173,34 @@
                         <tr>
                             <td>{{ $item->barang->judul }}</td>
                             <td>{{ $item->jumlah }}</td>
-                            <td>{{ $item->barang->harga }}</td>
-                            <td>{{ $item->barang->harga * $item->jumlah }}</td>
+                            <td>Rp. {{ number_format($item->barang->harga) }}</td>
+                            <td>Rp. {{ number_format($item->barang->harga * $item->jumlah) }}</td>
                         </tr>
                     @endforeach
                     <tr>
                         <td colspan="3" class="text-right">Total Harga Barang</td>
-                        <td>{{ number_format($data->total_harga) }} </td>
+                        <td>Rp. {{ number_format($data->total_harga) }} </td>
                     </tr>
                     <tr>
                         <td colspan="3" class="text-right">Ongkir</td>
-                        <td> {{ number_format($data->total_ongkir) }}</td>
+                        <td>Rp. {{ number_format($data->total_ongkir) }}</td>
                     </tr>
                     <tr>
                         <td colspan="3" class="text-right">Grand Total</td>
-                        <td> {{ number_format($data->total_ongkir + $data->total_harga) }}</td>
+                        <td>Rp. {{ number_format($data->total_ongkir + $data->total_harga) }}</td>
                     </tr>
+                    @if ($data->pembayaran == 'COD')
+                        <tr>
+                            <td colspan="3" class="text-right">Uang Cash</td>
+                            <td> Rp.{{ number_format($data->pecahan) }} </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="text-right">Kembalian</td>
+                            <td> Rp.
+                                {{ number_format($data->total_ongkir + $data->total_harga - $data->pecahan) }}
+                            </td>
+                        </tr>
+                    @endif
                 </tbody>
 
             </table>
