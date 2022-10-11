@@ -15,7 +15,7 @@
                     </option>
                     <option value="">-------------------------------------------------</option>
                     <option value="PENDING">PENDING</option>
-                    <option>PEMBAYARAN BERHASIL | BARANG SEDANG DIKEMAS</option>
+                    <option>PEMBAYARAN BERHASIL</option>
                 </select>
             </div>
             <div class="pt-1 mb-4">
@@ -24,7 +24,6 @@
                     Sekarang</button>
             </div>
         </form>
-
 
 
     </div>

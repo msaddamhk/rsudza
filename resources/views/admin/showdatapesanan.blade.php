@@ -43,12 +43,16 @@
                 <div class="col-md-3">
                     <h6 style="color: #275062; font-weight:800">Alamat</h6>
                     <p> {{ $pesanan->alamat }} </p>
+
                 </div>
                 <div class="col-md-4">
                     <h6 style="color: #275062; font-weight:800">Pengiriman</h6>
                     <h6 style="font-weight: bold">Kurir : {{ $pesanan->kurir }}</h6>
                     <h6 style="font-weight: bold">Opsi Pengiriman : {{ $pesanan->opsipengiriman }}</h6>
                     <h6 style="font-weight: bold">Estimasi Pengiriman : {{ $pesanan->etd }} Hari</h6>
+
+                    <h6 style="color: #000000; font-weight:800">Opsi Pembayaran</h6>
+                    <p> {{ $pesanan->pembayaran }} </p>
                 </div>
                 <div class="col-md-5">
                     <h6>Status Pembayaran : <b>{{ $pesanan->transaction_status }}</b></h6>
@@ -57,6 +61,15 @@
                         Rp.{{ number_format($pesanan->total_harga) }}</h6>
                     <h6 style="color: #275062; font-weight:800">Total Harga Rp.
                         {{ number_format($pesanan->total_ongkir + $pesanan->total_harga) }}</h6>
+                    <hr>
+                    @if ($pesanan->pembayaran == 'COD')
+                        <h6 style="color: #000000; font-weight:800">Pilihan</h6>
+                        <p> {{ $pesanan->pilihan }} </p>
+                        <h6 style="color: #000000; font-weight:800">Uang Pecahan</h6>
+                        <p> Rp.{{ number_format($pesanan->pecahan) }} </p>
+                        <h6 style="color: #000000; font-weight:800">Total Kembalian</h6>
+                        <p>Rp. {{ number_format($pesanan->total_ongkir + $pesanan->total_harga - $pesanan->pecahan) }}</p>
+                    @endif
 
                 </div>
             </div>

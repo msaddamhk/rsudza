@@ -15,6 +15,7 @@
                         <th scope="col">Kode Pesanan</th>
                         <th scope="col">Tanggal Pesanan</th>
                         <th scope="col">Status Pembayaran</th>
+                        <th scope="col">Opsi Pembayaran</th>
                         <th scope="col">Konfirmasi</th>
                         <th scope="col">Aksi</th>
                     </tr>
@@ -30,6 +31,7 @@
                             <td>{{ $item->kodepesanan }}</td>
                             <td>{{ $item->created_at->diffForhumans() }}</td>
                             <td value="">{{ $item->transaction_status }}</td>
+                            <td value="">{{ $item->pembayaran }}</td>
                             <td>
                                 @if ($item->konfirmasi == 'SUDAH DI KONFIRMASI')
                                     <P class="bg-success text-center text-white p-1 rounded-1" style="font-size: 14px">
